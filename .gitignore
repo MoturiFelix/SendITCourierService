@@ -1,0 +1,9 @@
+BACKEND/dist
+BACKEND/.env
+BACKEND/node_modules
+ESHOT/DeliveryEshot/dist
+ESHOT/DeliveryEshot/node_modules
+ESHOT/DeliveryEshot/.env
+ESHOT/WelcomeEshot/dist
+ESHOT/WelcomeEshot/node_modules
+ESHOT/WelcomeEshot/.env

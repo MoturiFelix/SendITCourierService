@@ -1,0 +1,37 @@
+<div class="layer2">
+  <div class="dash">
+    <h2>☰ Dashboard </h2><p> 
+      {{todayDate | date}}</p>
+  </div>
+  <div class="addbtn">
+    <button>Download Report</button>
+  </div>
+</div>
+
+<div class="users">
+    <div class="topic">
+
+      <h1>All Deliveries</h1>
+
+      
+    </div>
+
+    <table id="customers">
+      <tr>
+        <th>Full Name</th>
+        <th>Parcel Description</th>
+        <th>From</th>
+        <th>Destination</th>
+        <th>Status</th>
+      </tr>
+      <tr *ngFor="let parcel of allparcels">
+        <td>{{parcel.username}}</td>
+        <td>{{parcel.desc}}</td>
+        <td>{{parcel.from}}</td>
+        <td>{{parcel.dst}}</td>
+        <td>{{parcel.status}} <button><a routerLink="/admin/delivery/">Details</a></button></td>
+
+ 
+      </tr>
+    </table>
+  </div>
