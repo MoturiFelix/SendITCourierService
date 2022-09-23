@@ -6,7 +6,7 @@ import Joi from 'Joi'
 export const UserSchema2=Joi.object({
     fullNames:Joi.string().required(),
     email:Joi.string().required().email(),
-    password:Joi.string().required().min(8),
+    Password:Joi.string().required().min(8),
     
 })
 

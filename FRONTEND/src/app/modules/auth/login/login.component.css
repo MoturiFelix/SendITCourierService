@@ -69,3 +69,9 @@ input.ng-valid.ng-touched, textarea.ng-valid , select.ng-valid.ng-touched{
     color: red;
     font-size: small;
 }
+
+@media   screen and (max-width: 600px) {
+    
+
+    
+}

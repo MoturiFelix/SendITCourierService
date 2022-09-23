@@ -18,20 +18,24 @@
 
     <table id="customers">
       <tr>
-        <th>Full Name</th>
         <th>Parcel Description</th>
         <th>From</th>
         <th>Destination</th>
         <th>Status</th>
-      </tr>
-      <tr *ngFor="let parcel of allparcels">
-        <td>{{parcel.username}}</td>
-        <td>{{parcel.desc}}</td>
-        <td>{{parcel.from}}</td>
-        <td>{{parcel.dst}}</td>
-        <td>{{parcel.status}} <button><a routerLink="/admin/delivery/">Details</a></button></td>
+       <th>Receiver</th>
 
+      </tr>
+      <tr *ngFor="let parcel of allparcels | paginate: { itemsPerPage:5, currentPage: p }">
+
+        
+        <td>{{parcel.ParcelDescription }}</td>
+        <td>{{parcel.DispatchedFrom}}</td>
+        <td>{{parcel.Destination}}</td>
+        <td>{{parcel.ReceiverName}}</td>
+        <td>{{parcel.P_Status}} <button><a (click)="parceldetail(parcel.ParcelID)">Details</a></button></td>
+        <!-- routerLink="/admin/delivery/" -->
  
       </tr>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
     </table>
   </div>

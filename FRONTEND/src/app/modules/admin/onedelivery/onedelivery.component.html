@@ -1,23 +1,30 @@
 <div class="maincont">
 
-<div class="container">
+<div class="container" *ngFor=" let parcel of allparcels"  >
 
     {{todayDate | date}}
 
+
+
     <h1>Parcel Info</h1>
 
-    <p>Username:  </p>
-    <p> Parcel Name: </p>
-    <p>Destination: </p>
-    <p>From: </p>
-    <p>Weight:</p>  
-    <p>Status: </p>
-    <p>Time out: </p>
-    <p>Arrival Time: </p>
+    <p><b>Username:</b> {{parcel.ParcelDescription}} </p>
+    <p><b> Parcel Name:</b> {{parcel.ParcelDescription}} </p>
+    <p><b>Destination:</b> {{parcel.Destination}}</p>
+    <p><b>From:</b> {{parcel.DispatchedFrom}}</p>
+    <p><b>Weight:</b> {{parcel.p_weight}}</p>  
+    <p><b>Status:</b> {{parcel.P_Status}}</p>
+    <p><b>Time out:</b> {{parcel. P_TimeOut}} </p>
+    <p><b>Arrival Time:</b> {{parcel.P_ArrivalTime}}</p>
+    <p><b>Receiver's Name</b> {{parcel.ReceiverName}}</p>
+    <p><b>Receiver's Time:</b> {{parcel.ReceiversNumber}}</p>
+
+
+
     <button routerLink="/admin" >Back</button>
 </div>
 
 <div class="map">
-    <img src="assets/images/map.jpg" alt="">
+    <img style="height:320px ;" src="assets/images/map.jpg" alt="">
 </div>
 </div>

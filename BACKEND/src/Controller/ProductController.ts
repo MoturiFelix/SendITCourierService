@@ -109,6 +109,7 @@ export const getAllParcels: RequestHandler = async (req, res) => {
             return  res.json({ message: "no Parcels in the database" });
         }else{
             return res.json(parcels);
+            
 
         }
         

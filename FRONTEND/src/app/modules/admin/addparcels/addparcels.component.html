@@ -8,33 +8,41 @@
          </div>   
         <form  [formGroup]="formValue" (ngSubmit)="addParcel()">
           <!-- <label for="name">Full Names</label><br> -->
-          <input class="put" type="text" id="fname" name="firstname" placeholder="Your Full name.." formControlName='username'  />
+          <!-- <input class="put" type="text" id="fname" name="firstname" placeholder="Your Full name.." formControlName='username'  /> -->
           <!-- <p class="error" *ngIf= "!form.get('username')!.valid && form.get('username')!.touched">* Please Enter a username</p> -->
           <br>
           
-          <input class="put" type="text" id="desc" name="description" placeholder="Parcel Description" formControlName='desc'  />
+          <input class="put" type="text" id="desc" name="description" placeholder="Parcel Description" formControlName='ParcelDescription'  />
          <br>
 
     
-         <input class="put" type="text" id="from" name="from" placeholder="From" formControlName='from'  />
+         <input class="put" type="text" id="from" name="from" placeholder="From" formControlName='DispatchedFrom'  />
          <br>
             
-         <input class="put" type="text" id="dst" name="dst" placeholder="Destination" formControlName='dst'  />
+         <input class="put" type="text" id="dst" name="dst" placeholder="Destination" formControlName='Destination'  />
          <br>
 
-         <input class="put" type="text" id="weight" name="weight" placeholder="Parcel Weight" formControlName='weight'  />
+         <input class="put" type="text" id="weight" name="weight" placeholder="Parcel Weight" formControlName='p_weight'  />
 
-         <input class="put" type="text" id="status" name="status" placeholder="status" formControlName='status'  />
-         <br>
+         <input class="put" type="text" id="status" name="status" placeholder="Status" formControlName='P_Status'  />
         
-          <label for="name">TIME OUT</label><br>
-         <input class="put" type="time" id="timeout" name="timeout" placeholder="Timeout" formControlName='departure'  />
+        
+          
+         <input class="put" type="time" id="timeout" name="timeout" placeholder="Timeout" formControlName='P_TimeOut'  />
+         <label for="name"> <b> TIME OUT</b></label>
+         
+         <input class="put" type="time" id="arrival" name="arrival" placeholder="arrival" formControlName='P_ArrivalTime'  />
+         <label for="name"> <b> ARRIVAL TIME</b> </label><br>
+          
+         <input class="put" type="email" id="SenderEmail" name="SenderEmail" placeholder="Sender's Email" formControlName='Sender_Email'  />
          <br>
-         <label for="name">ARRIVAL TIME</label><br>
-         <input class="put" type="time" id="arrival" name="arrival" placeholder="arrival" formControlName='arrival'  />
-         <br>
-      
             
+         <input class="put" type="text" id="ReceiverName" name="ReceiverName" placeholder="Receiver Name" formControlName='ReceiverName'  />
+         <br>
+         
+         <input class="put" type="text" id="ReceiverNumber" name="ReceiverNumber" placeholder="Receiver Number" formControlName='ReceiversNumber'  />
+         <br>
+         
          <br>
       
       

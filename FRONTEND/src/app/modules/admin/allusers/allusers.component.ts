@@ -7,6 +7,7 @@ import { AdminService, customerInterface } from '../adminservices/admin.service'
   styleUrls: ['./allusers.component.css']
 })
 export class AllusersComponent implements OnInit {
+  p: number = 1;
 
   users:customerInterface[]=[]
 
@@ -14,7 +15,7 @@ export class AllusersComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.allUsers.getAllCustomers().subscribe(res=>{
+    this.allUsers.getAllUsers().subscribe(res=>{
       this.users=res
     })
     console.log(this.users);

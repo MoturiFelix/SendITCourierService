@@ -20,11 +20,14 @@
         <th>Phone number</th>
         <th>Status</th>
       </tr>
-      <tr *ngFor="let user of users">
-        <td>{{user.username}}</td>
-        <td>{{user.email}} </td>
-        <td>{{user.number}}</td>
+      <tr *ngFor="let user of users | paginate: { itemsPerPage:8, currentPage: p }">
+        <td>{{user.FullNames}}</td>
+        <td>{{user.EmailAddress}} </td>
+        <td>{{user.PhoneNumber}}</td>
         <td>Active</td>
       </tr>
+
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
     </table>
   </div>

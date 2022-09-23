@@ -1,25 +1,30 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 
 
 export interface customerInterface{
-  username:string
-  email: string
-  number: string
-  password:string
+  FullNames:string
+  EmailAddress: string
+  PhoneNumber: string
+  Password:string
 
 }
 export interface parcelInterface{
-  username:string
-  desc: string
-  from: string
-  dst:string
-  weight:string
-  status:string
-  departure:string
-  arrival:string
+  ParcelID:string
+  ParcelDescription:string
+  DispatchedFrom:string
+  Destination:string
+  p_weight:string
+  P_Status:string
+  P_TimeOut:string
+  P_ArrivalTime:string
+  Sender_Email:string
+  ReceiverName:string
+  ReceiversNumber:string
+
+
 }
 
 @Injectable({
@@ -29,20 +34,21 @@ export class AdminService {
 
   constructor(private http:HttpClient) { }
 
-  getAllCustomers():Observable<customerInterface[]>{
-    return this.http.get<customerInterface[]>('http://localhost:3000/customers')
+  getAllUsers():Observable<customerInterface[]>{
+    return this.http.get<customerInterface[]>('http://localhost:5000/user/allusers')
   }
 
   addParcel(parcelData:parcelInterface):Observable<parcelInterface[]>{
-    return this.http.post<parcelInterface[]>('http://localhost:3000/parcels',parcelData)
+    return this.http.post<parcelInterface[]>('http://localhost:5000/parcels',parcelData)
   }
 
   getAllParcels():Observable<parcelInterface[]>{
-    return this.http.get<parcelInterface[]>('http://localhost:3000/parcels')
+    return this.http.get<parcelInterface[]>('http://localhost:5000/parcels')
+    
   }
 
-  getParcel(id:number){
-    return this.http.get<parcelInterface[]>(`http://localhost:3000/parcels/${id}`)
+  getParcel(ParcelID:string){
+    return this.http.get<parcelInterface[]>(`http://localhost:5000/parcels/${ParcelID}`)
   }
 
 }

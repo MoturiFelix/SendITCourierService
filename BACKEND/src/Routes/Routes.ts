@@ -1,6 +1,6 @@
 import { getSingleParcel, getAllParcels, deleteParcel } from './../Controller/ProductController';
 import { VerifyToken } from './../Middleware/VerifyToken';
-import { registerUser, loginUser, getHomepage ,checkUser } from './../Controller/UserController';
+import { registerUser, loginUser, getHomepage, checkUser, getAllUsers } from './../Controller/UserController';
 import { Router } from "express";
 import { insertParcel } from '../Controller/ProductController';
 
@@ -13,6 +13,7 @@ router.post('/login', loginUser)
 router.post('/signup', registerUser)
 router.get('/homepage',VerifyToken, getHomepage)
 router.get('/check' ,VerifyToken,checkUser)
+router.get('/allusers', getAllUsers)
 
 
 //Parcel routes

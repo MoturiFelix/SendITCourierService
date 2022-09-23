@@ -12,7 +12,8 @@ const routes: Routes = [
     {path:'',component:AlldeliveryComponent},
    {path:'add-parcel',component:AddparcelsComponent},
    {path:'all-users',component:AllusersComponent},
-   {path:'delivery',component:OnedeliveryComponent}
+   {path:'delivery/:ParcelID',component:OnedeliveryComponent}
+
 
   ]},
   
